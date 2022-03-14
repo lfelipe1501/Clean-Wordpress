@@ -4,8 +4,6 @@ This repository contains a little `bash-script` to clean and organize any wordpr
 
 ## Details
 
-The following versions are used.
-
 This script can be used to clean, reinstall or UPGRADE a wordpress site that has version problems or some corrupt or infected file problem.
 
 ## How to use
