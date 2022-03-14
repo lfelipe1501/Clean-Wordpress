@@ -18,13 +18,17 @@ UY='\033[4;33m'
 UG='\033[4;32m'
 
 #Check if you are in the directory where wordpress was installed
-FILE=wp-config.php
+FILE='wp-config.php'
 if [ -f "$FILE" ]; then
 
 #get files and folders owner and group for actual wordpress installation
 file_meta=($(ls -l $FILE)) 
 file_owner="${file_meta[2]}" # get User
 file_group="${file_meta[3]}" # get Group
+
+echo $file_meta
+echo $file_owner
+echo $file_group
 
 echo -e "==================================\n$OB Wordpress Clean or Update$W \n=================================="
 
@@ -45,7 +49,7 @@ find . ! -name limpiarWP.sh \
 ! -name .litespeed_flag \
 ! -name .htaccess \
 -type f -iname 'wp-*.php' -iname 'xmlrpc.php' -iname 'index.php' -delete;
-rsync --stats -a wpltsv/wordpress/* ./
+rsync --stats -a wpltsv/wordpress/* ./ && chown -R $file_owner:$file_group *
 
 #Cleaning and deleting files and folders created by this script
 rm -rf wpltsv*
