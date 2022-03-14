@@ -10,7 +10,9 @@ This script can be used to clean, reinstall or UPGRADE a wordpress site that has
 
 Its use is very simple, you just need to go to the main folder of the wordpress installation and then run the following command:
 
-> `curl https://raw.githubusercontent.com/lfelipe1501/Clean-Wordpress/main/cleanwp.sh | sh`
+```bash
+ curl https://raw.githubusercontent.com/lfelipe1501/Clean-Wordpress/main/cleanwp.sh | sh
+```
 
 ### that's it
 
