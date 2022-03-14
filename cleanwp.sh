@@ -26,10 +26,6 @@ file_meta=($(ls -l $FILE))
 file_owner="${file_meta[2]}" # get User
 file_group="${file_meta[3]}" # get Group
 
-echo $file_meta
-echo $file_owner
-echo $file_group
-
 echo -e "==================================\n$OB Wordpress Clean or Update$W \n=================================="
 
 ##Download Latest Wordpres
