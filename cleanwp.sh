@@ -43,7 +43,7 @@ mkdir wpltsv && chown -R $file_owner:$file_group wpltsv && tar -xzf wpltsv.tar.g
 #Clean OLD Wordpress or Infected Files
 echo -e "$OG installing, cleaning and placing the new wordpress files$W\n"
 rm -rf wp-admin/ wp-includes/ .well-known/; \
-find . ! -name wp-config.php -maxdepth 1 -type f \( -name 'wp-*.php' -o -name 'xmlrpc.php' -o -name 'index.php' \) -delete;
+find . -maxdepth 1 ! -name 'wp-config.php' -type f \( -name 'wp-*.php' -o -name 'xmlrpc.php' -o -name 'index.php' \) -delete;
 rsync --stats -a wpltsv/wordpress/* ./ && chown -R $file_owner:$file_group *
 
 #Cleaning and deleting files and folders created by this script
