@@ -56,7 +56,7 @@ rm -rf wpltsv*
 echo -e "\nCleaning and deleting files and folders created by this script\n$UG>> everything is ready!....$W\n"
 
 else 
-    echo -e "$FILE does not exist."
+    echo -e "\n$FILE does not exist."
     echo -e "REMEMBER: in order to use this script, you must place it inside the folder where the WordPress was installed\nFor example:$B /var/www/html/wordp$W or$B /home/user/public_html$W"
     exit 1
 fi
