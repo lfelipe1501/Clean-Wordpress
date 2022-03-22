@@ -14,6 +14,9 @@ Its use is very simple, you just need to go to the main folder of the wordpress 
 curl https://raw.githubusercontent.com/lfelipe1501/Clean-Wordpress/main/cleanwp.sh | bash
 ```
 
+a small example of how it works :sunglasses:
+![CleanWP](https://www.lfsystems.com.co/images/cleanwp.gif)
+
 ### that's it
 
 ### Contact / Social Media
