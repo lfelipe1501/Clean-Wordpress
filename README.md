@@ -15,7 +15,7 @@ curl https://raw.githubusercontent.com/lfelipe1501/Clean-Wordpress/main/cleanwp.
 ```
 
 a small example of how it works :sunglasses:
-![CleanWP](https://www.lfsystems.com.co/images/cleanwp.gif)
+![CleanWP](https://raw.githubusercontent.com/lfelipe1501/lfelipe-projects/master/cleanwp.gif)
 
 ### that's it
 
