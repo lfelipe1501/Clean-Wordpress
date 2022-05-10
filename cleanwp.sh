@@ -40,7 +40,13 @@ mkdir wpltsv && chown -R $file_owner:$file_group wpltsv && tar -xzf wpltsv.tar.g
 echo -e "$OG installing, cleaning and placing the new wordpress files$W\n"
 rm -rf wp-admin/ wp-includes/ .well-known/;
 find . -maxdepth 1 ! -name 'wp-config.php' -type f \( -name 'wp-*.php' -o -name 'xmlrpc.php' -o -name 'index.php' \) -delete;
-rsync --stats -a wpltsv/wordpress/* ./ && chown -R $file_owner:$file_group *;
+
+# check script is being run by root or normal user
+if [[ $EUID -ne 0 ]]; then
+    cp -r wpltsv/wordpress/* ./ && chown -R $file_owner:$file_group *;
+else
+    rsync --stats -a wpltsv/wordpress/* ./ && chown -R $file_owner:$file_group *;
+fi
 
 #Cleaning and deleting files and folders created by this script
 rm -rf wpltsv*;
